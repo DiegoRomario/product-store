@@ -10,11 +10,13 @@ import { ProductPayload } from '../interfaces/payload-product.interface';
 export class ProductsService {
   httpClient = inject(HttpClient);
 
-  getAll(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>('/api/products');
-  }
+  getAll = (): Observable<Product[]> => this.httpClient.get<Product[]>('/api/products');
 
-  post(payload: ProductPayload) {
-    return this.httpClient.post('/api/products', payload);
-  }
+  get = (id: string): Observable<Product> => this.httpClient.get<Product>(`/api/products/${id}`);
+
+  post = (payload: ProductPayload) => this.httpClient.post('/api/products', payload);
+
+  put = (id: string, payload: ProductPayload) => this.httpClient.put(`/api/products/${id}`, payload);
+
+  delete = (id: string) => this.httpClient.delete(`/api/products/${id}`);
 }
