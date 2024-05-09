@@ -6,10 +6,11 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { ConfirmationDialogService } from '../../shared/services/confirmation-dialog.service';
 import { filter } from 'rxjs';
+import { NoItemsComponent } from '../../shared/components/no-items/no-items.component';
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent, RouterLink, MatButtonModule],
+  imports: [CardComponent, NoItemsComponent, RouterLink, MatButtonModule],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
