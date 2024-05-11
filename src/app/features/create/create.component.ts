@@ -8,10 +8,11 @@ import { ProductsService } from '../../shared/services/products.service';
 import { Router } from '@angular/router';
 import { Product } from '../../shared/interfaces/product.interface';
 import { FormComponent } from '../form/form.component';
+import { BackToHomeComponent } from '../../shared/components/back-to-home/back-to-home.component';
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormComponent],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormComponent, BackToHomeComponent],
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss'
 })
