@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, input } from '@angular/core';
+import { Component, OnInit, input, output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,7 +14,7 @@ import { Product } from '../../shared/interfaces/product.interface';
 })
 export class FormComponent implements OnInit {
   product = input<Product | null>(null);
-  @Output() save = new EventEmitter<Product>();
+  save = output<Product>();
 
   form!: FormGroup;
 
